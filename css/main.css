@@ -1,0 +1,663 @@
+/* Imports Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #dce1df;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.5s ease;
+}
+
+body.light-mode{
+    --colorPulse1 : rgba(0, 0, 0, 0.85);
+    --colorPulse2 : rgba(0, 0, 0, 0);
+    --sombraTexto: 2px 2px 5px rgb(17, 215, 250);
+    --colorPanel:  rgba(255, 255, 255, 0.4);
+    --sombraPanel: rgba(0, 0, 0, 1);
+  transition: all 0.5s ease;
+}
+
+
+/* Header */
+
+header {
+    /* width: 100%;
+    height: 600px;
+    background: #297fb952; 
+    background: -webkit-linear-gradient(to right, #ffffff5d, #6dd4faec, #297fb9a1), url(../img/sky2.jpg);  
+    background: linear-gradient(to right, #ffffff80, #6dd4fa88, #297fb9a4), url(../img/sky2.jpg); 
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    -webkit-animation: movimiento 10s infinite linear alternate;
+            animation: movimiento 10s infinite linear alternate;
+    transition: all 0.5s ease; */
+
+      width: 100%;
+      height: 600px;
+      background-image: url(../img/sky2.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+      -webkit-animation: movimiento 10s infinite linear alternate;
+      animation: movimiento 10s infinite linear alternate;
+      transition: all 0.5s ease; 
+    
+
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 82px;
+    letter-spacing: 12px;
+    font-weight: 500;
+    color:#333;
+}
+
+.textos-header h2 span:nth-child(1){
+    animation-delay: 0s;
+}
+.textos-header h2 span:nth-child(2){
+    animation-delay: 0.3s;
+}
+.textos-header h2 span:nth-child(3){
+    animation-delay: 0.6s;
+}
+.textos-header h2 span:nth-child(4){
+    animation-delay: 0.9s;
+}
+ .textos-header h2 span:nth-child(5){
+    animation-delay: 1.2s;
+}
+.textos-header h2 span:nth-child(6){
+    animation-delay: 1.5s;
+}
+.textos-header h2 span:nth-child(7){
+    animation-delay: 1.8s;
+}
+.textos-header h2 span:nth-child(8){
+    animation-delay: 2.1s;
+}
+
+.textos-header h2 span{
+    animation: animate 3s linear infinite;
+} 
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    fill: #dce1df;
+    transition: all 0.5s ease;
+}
+
+
+/* Contenido */
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #014C69;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos a{
+    text-decoration: none;
+}
+
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 400;
+}
+
+
+.contenido-textos h3 span{
+    background: #014C69;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.boton {
+    position: relative;
+    display: block;
+    height: 35px;
+    width: 100px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #333;
+    font-size: 18px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    border: 2px solid #014C69;
+    margin-top: 10px;
+    z-index: 0;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton::before {
+    content: "";
+    position: absolute;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background-color: #014C69;
+    transition: all 500ms ease;
+    z-index: -1;
+}
+
+.boton--3:hover {
+    -webkit-animation: shadow-pulse 1000ms 1;
+    animation: shadow-pulse 1000ms 1;
+    background-color: #014C69;
+    color: #fff;
+}
+
+/* Galeria */
+
+
+
+
+/* Boton DarkMode */
+.container-logotipo{
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 10000;
+}
+
+.container-logotipo .logo{
+    cursor: pointer;
+    border-radius: 50%;
+    width: 95px;
+    filter: sepia(70%);
+    transition: .4s ease all;
+}
+
+.container-logotipo .logo:hover{
+    filter: sepia(0);
+    transition: .4s ease all;
+    animation: pulso 1.5s infinite;
+}
+
+
+/* Dark-Mode active */
+
+body.dark-mode{
+    background:#14222b;
+    --colorPulse1 : rgba(255, 255, 255, 0.85);
+    --colorPulse2 : rgba(255, 255, 255, 0);
+    --sombraTexto: 2px 2px 5px #000;
+    --colorPanel:rgba(0, 0, 0, 0.4);
+    --sombraPanel: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode header{
+    background: #14222b;
+    background: -webkit-linear-gradient(to left, #14222b8e, #ffffff71), url(../img/moon.jpg);
+    background: linear-gradient(to left, #14222b6e, #ffffff62), url(../img/moon.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    -webkit-animation: movimiento 10s infinite linear alternate;
+            animation: movimiento 10s infinite linear alternate;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .contenido-textos h3 span{
+    background: #00ADB5;
+    color: #EEEEEE;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+body.dark-mode .titulo {
+    color: #EEEEEE;
+}
+
+
+body.dark-mode .contenido-textos h3 {
+    color: #00ADB5;
+    font-weight:bold;
+}
+
+body.dark-mode .contenido-textos p {
+    color: #EEEEEE;
+}
+
+body.dark-mode .boton {
+    color: #EEEEEE;
+    border: 2px solid #00ADB5;
+}
+
+body.dark-mode .boton::before {
+    background-color: #00ADB5;
+}
+
+body.dark-mode .boton--3:hover {
+    -webkit-animation: shadow-pulse-dark 1000ms 1;
+    animation: shadow-pulse-dark 1000ms 1;
+    background-color: #00ADB5;
+    color: #fff;
+}
+
+body.dark-mode .wave{
+    fill: #14222b;
+   
+}
+
+body.dark-mode .textos-header h2 span {
+    animation: leftRight 3s linear infinite;
+}
+
+body.dark-mode .textos-header h2 span:nth-child(1){
+    animation-delay: 0s;
+}
+body.dark-mode .textos-header h2 span:nth-child(2){
+    animation-delay: 0.3s;
+}
+body.dark-mode .textos-header h2 span:nth-child(3){
+    animation-delay: 0.6s;
+}
+body.dark-mode .textos-header h2 span:nth-child(4){
+    animation-delay: 0.9s;
+}
+body.dark-mode .textos-header h2 span:nth-child(5){
+    animation-delay: 1.2s;
+}
+body.dark-mode .textos-header h2 span:nth-child(6){
+    animation-delay: 1.5s;
+}
+body.dark-mode .textos-header h2 span:nth-child(7){
+    animation-delay: 1.8s;
+}
+body.dark-mode .textos-header h2 span:nth-child(8){
+    animation-delay: 2.1s;
+}
+
+ body.dark-mode .footer {
+     background-image: url(../img/grass-ng9.png);
+ }
+
+ body.dark-mode .container-footer {
+     background-image: url(../img/tierraO2.png);
+ }
+
+/* Footer */
+footer{
+    width: 100%;
+}
+
+.footer{
+  /* font-size: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+    width: 100%;  
+    height: 100px;
+    border: none;
+    background-size: contain;
+    background-attachment:local;
+    background-image: url(../img/grass.png);
+ }
+
+ .footer .cd{
+   background-size:unset;
+   background-repeat: repeat-y;
+   width: auto;
+   text-align: center;
+ }
+
+ .container-footer{
+     
+    width: 100%;  
+    background-size: contain;
+    background-image: url(../img/tierra1.png);
+}
+
+.footer-2{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #ffffff;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* KEYFRAMES */
+@keyframes movimiento {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+
+@keyframes pulso{
+    0%{
+        box-shadow: 0 0 0 0 var(--colorPulse1);
+    }
+    50%{
+        box-shadow: 0 0 0 25px var(--colorPulse2);
+    }
+    100%{
+        box-shadow: 0 0 0 0 var(--colorPulse2);
+    }
+}
+
+@keyframes animate {
+    0%,80%{
+        color: #F6F6F6;
+        text-shadow: none;
+    }
+    100%{
+        color: #fff;
+        text-shadow: 0 0 10px #fff,
+                     0 0 40px #fff,
+                     0 0 80px #fff,
+                     0 0 120px #fff,
+                     0 0 160px #fff,
+                     0 0 200px #fff;
+
+    }
+}
+
+@keyframes leftRight {
+    0%,80%{
+        color: #EEEEEE;
+        text-shadow: none;
+    }
+    100%{
+        color: #EEEEEE;
+        text-shadow: 0 0 10px #F6F6F6,
+                     0 0 40px #F6F6F6,
+                     0 0 80px #F6F6F6,
+                     0 0 120px #F6F6F6,
+                     0 0 160px #F6F6F6,
+                     0 0 200px #F6F6F6;
+
+    }
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgb(1, 76, 105);
+    }
+
+    100% {
+        box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+    }
+}
+
+@keyframes shadow-pulse-dark {
+    0% {
+        box-shadow: 0 0 0 0 rgb(0, 173, 181);
+    }
+
+    100% {
+        box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+    }
+}
+
+@keyframes night {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #0e3742;
+        text-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
+    }
+}
+
+@keyframes light {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: rgb(250, 244, 244);
+        text-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: rgb(250, 244, 244);
+        text-shadow: 0 0 10px #0096a0,
+            0 0 20px #0096a0,
+            0 0 40px #0096a0,
+            0 0 80px #0096a0,
+            0 0 160px #0096a0;
+    }
+}
+
+
+@keyframes crt-me {
+    0% {
+      clip: rect(31px, 9999px, 94px, 0);
+    }
+    10% {
+      clip: rect(112px, 9999px, 76px, 0);
+    }
+    20% {
+      clip: rect(85px, 9999px, 77px, 0);
+    }
+    30% {
+      clip: rect(27px, 9999px, 97px, 0);
+    }
+    40% {
+      clip: rect(64px, 9999px, 98px, 0);
+    }
+    50% {
+      clip: rect(61px, 9999px, 85px, 0);
+    }
+    60% {
+      clip: rect(99px, 9999px, 114px, 0);
+    }
+    70% {
+      clip: rect(34px, 9999px, 115px, 0);
+    }
+    80% {
+      clip: rect(98px, 9999px, 129px, 0);
+    }
+    90% {
+      clip: rect(43px, 9999px, 96px, 0);
+    }
+    100% {
+      clip: rect(82px, 9999px, 64px, 0);
+    }
+  }
+
+
+/* Responsive */
+@media screen and (max-width:900px){
+    .textos-header h2{
+        font-size: 52px;
+        letter-spacing: normal;
+    }
+
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+        padding-top: 70px;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+    .container-logotipo .logo{
+        width: 50px;
+    }
+
+    
+}
+
+@media screen and (max-width:695px){
+    .footer{
+        /* font-size: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+          width: 100%;  
+          height: 50px;
+          border: none;
+          background-size: contain;
+          background-attachment:local;
+         
+       }
+       .container-footer{
+        width: 100%;
+        background-size: contain;
+        
+    }
+}
+
+@media screen and (max-width:280px) {
+    .footer {
+        /* font-size: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+        width: 100%;
+        height: 20px;
+        border: none;
+        background-size: contain;
+        background-attachment: local;
+
+    }
+    
+    .container-footer {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+         background-attachment: local;
+    }
+}
+
