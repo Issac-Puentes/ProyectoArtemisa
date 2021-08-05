@@ -64,6 +64,7 @@ body.dark-mode .glitch-window{
 }
 
 .header-question{
+  margin-top: 10%;
   width: 100%;
   height: auto;
   background: #008a93;
@@ -243,7 +244,6 @@ body.dark-mode .container{
   }
   
   footer {
-    background-color: black;
     position: absolute;
     bottom: 0;
     width: 100%;
