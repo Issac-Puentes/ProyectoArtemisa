@@ -19,13 +19,13 @@
 
 
     <div class="header-question">
-        <h3>Aqui va una pregunta</h3>
+        <div class="form">
+            <h3>Aqui va una pregunta</h3>
         <p>Aqui va la descripcion: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quas, 
         iste facere aspernatur voluptatem odio incidunt. Quod, ratione fuga ullam nesciunt, minima numquam 
         id libero obcaecati, natus laudantium doloremque dolores.</p>
+        </div>
     </div>
-
-    <button style="margin-left: 20px;" class="boton boton--3" id="btnC">Cambio</button>
 
     <div class="formulario ocultar" id="ocultarF1">
         <div class="form">
@@ -68,8 +68,9 @@
             <form action="#" method="post">
             <label for="" class="label">Elige una opción: </label>
             <select name="select" class="select-css" id="select">
+                <option value="#" selected>Elige una Respuesta</option>
                 <option value="respuesta 1">Respuesta 1</option>
-                <option value="respuesta 2" selected>Respuesta 2</option>
+                <option value="respuesta 2">Respuesta 2</option>
                 <option value="respuesta 3">Respuesta 3</option>
                 <option value="respuesta 4">Respuesta 4</option>
                 <option value="respuesta 5">Respuesta 5</option>
@@ -82,7 +83,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-danger btn-lg btn-end mt-4">Cancelar</button>
+                <button type="button" class="btn btn-danger btn-lg btn-end mt-4" id="btnCancelar">Cancelar</button>
             </div>
         </div>
     </div>

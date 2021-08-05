@@ -67,7 +67,11 @@ body.dark-mode .glitch-window{
   margin-top: 10%;
   width: 100%;
   height: auto;
-  background: #008a93;
+  /* background: #008a93; */
+}
+
+body.dark-mode .header-question {
+  color: #dce1df;
 }
 
 .header-question h3{
@@ -89,9 +93,7 @@ body.dark-mode .glitch-window{
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 0 1rem;
-  margin-top: 20px;
-  /* background: #ff6666; */
+  /* background: #ff6666;  */
   transition: all 0.5s ease;
 }
 
@@ -109,7 +111,7 @@ body.dark-mode .glitch-window{
   margin-left: 20px;
 }
 .dsn2{
-  margin: 50px 0px 50px 0;
+  margin: 50px 30px 50px 0;
 }
 .dsn3{
   flex-direction: column;
@@ -125,6 +127,10 @@ body.dark-mode .glitch-window{
 .form .label{
   font-family: 'Verdana', sans-serif;
   font-size: 25px;
+}
+
+body.dark-mode .form .label {
+  color: #dce1df;
 }
 
 .select-css {

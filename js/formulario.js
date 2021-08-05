@@ -1,4 +1,3 @@
-const btnCambio = document.getElementById('btnC');
 const OF1 =  document.getElementById('ocultarF1');
 const OF2 =  document.getElementById('ocultarF2');
 const OF3 =  document.getElementById('ocultarF3');
@@ -15,10 +14,14 @@ const bt7 = document.getElementById('btn7');
 const bt8 = document.getElementById('btn8');
 const bt9 = document.getElementById('btn9');
 const bt10 = document.getElementById('btn10');
+const btnCancel = document.getElementById('btnCancelar');
 
 var array = [];
 let respuestas = 2;
 
+btnCancel.addEventListener('click', () => {
+     
+})
 
 
 btn1.addEventListener('click', () => {
@@ -90,6 +93,7 @@ btn10.addEventListener('click', () => {
     var respuesta1 = document.getElementById('select').value;
     array.push(respuesta1);
     alert('Sus elecciones fueron: ' + array);
+    location.href='galeria.html'
 })
 
 
