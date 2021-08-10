@@ -177,8 +177,10 @@ main .sobre-nosotros{
    position: relative;
    display: flexbox;
    height: 45px;
+   /* margin-left: 12px; */
    border-radius: 4px;
    width: 200px;
+   color: #bcc0bec9;
    background: transparent;
    border:2px solid #bcc0bec9;
    text-transform: uppercase;
@@ -187,7 +189,7 @@ main .sobre-nosotros{
 
 body.dark-mode .btn-color{
     border:2px solid #182a35;
-    color: #dce1df;
+    color: #182a35;
 }
 
 body.dark-mode .btn-color:hover {
