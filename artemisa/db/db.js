@@ -15,16 +15,16 @@ async function galleryComarostaphylis() {
     try {
         let pool = await sql.connect(conn);
         let out = await pool.request().query('SELECT * FROM madronos_Comarostaphylis');
-        console.log(out.recordsets); 
+        return out.recordsets; 
     } catch (err){
         console.log(err);
     }
 }
 
-async function Preguntas() {
+async function Preguntas(N) {
     try {
         let pool = await sql.connect(conn);
-        let out = await pool.request().query("select value, descripcion,pregunta from preguntas cross apply string_split(respuesta, ';') where id = 1 AND tipo = 1");
+        let out = await pool.request().query("select value, descripcion,pregunta from preguntas cross apply string_split(respuesta, ';') where id ="+N);
         return out.recordsets; 
     } catch (err){
         console.log(err);
