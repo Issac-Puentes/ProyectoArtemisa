@@ -332,8 +332,9 @@ body.dark-mode .container{
     background: #d9d9d9;
     position: absolute;
     width: 100%;
+    height: 100px;
     transform-origin: top;
-    transform: rotateX(-90deg);
+    transform: rotateX(-110deg);
     -webkit-box-shadow: 13px 11px 10px 0px rgba(54, 54, 54, 1);
     -moz-box-shadow: 13px 11px 10px 0px rgba(54, 54, 54, 1);
     box-shadow: 13px 11px 10px 0px rgba(54, 54, 54, 1);
@@ -341,7 +342,7 @@ body.dark-mode .container{
 
   body.dark-mode div.card div.card-flap{
     background: #202c33;
-    color: #ffffff;
+    color: #fff;
   }
 
   div.card div.flap1 {
