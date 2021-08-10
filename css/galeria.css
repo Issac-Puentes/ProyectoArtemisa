@@ -122,10 +122,9 @@ body.dark-mode .header-question {
   margin: 50px 30px 50px 0;
 }
 .dsn3{
-  flex-direction: column;
-  display:list-item;
-  margin: 30px 0 30px 0;
-  margin-left: 100px;
+  display: flexbox;
+  margin: 50px 0 50px 0;
+  margin-left: 20px;
 }
 
 .btn-end{
