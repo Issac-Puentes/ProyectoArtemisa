@@ -24,17 +24,21 @@ async function galleryComarostaphylis() {
 async function Preguntas(N) {
     try {
         let pool = await sql.connect(conn);
-        let out = await pool.request().query("select value, descripcion,pregunta from preguntas cross apply string_split(respuesta, ';') where id ="+N);
+        let out = await pool.request()
+        .input('id',sql.Int, N)
+        .query("select value, descripcion, pregunta from preguntas cross apply string_split(respuesta, ';') where id ="+N);
         return out.recordsets; 
     } catch (err){
         console.log(err);
     }
 }
 
-async function searchComarostaphylis(filter) {
+async function searchArbustus(filter) {
     try {
         let pool = await sql.connect(conn);
-        let out = await pool.request().query('SELECT * FROM madronos_Comarostaphylis WHERE estado='+filter+' AND habito='+filter+' AND');
+        let out = await pool.request()
+        .input('filter',sql.VarChar, filter)
+        .query('SELECT * FROM madronos_Arbustus WHERE '+filter);
     } catch (err){
         console.log(err);
     }

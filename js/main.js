@@ -1,3 +1,4 @@
+
 const logo = document.getElementById('logo');
 const imgWth = document.getElementById('logo');
 const imgBlk = document.getElementById('logo');
@@ -100,10 +101,24 @@ logo.addEventListener('click',()=>{
 
   button.addEventListener('click', () => {
     oculto.classList.toggle('mostrar');
+    oculto2.classList.remove('mostrar');
+    if (button.classList == 'btn-active') {
+        button.classList.remove('btn-active')
+    }else{
+         button.classList.toggle('btn-active')
+         button2.classList.remove('btn-active')
+    }
    });
 
    button2.addEventListener('click', () => {
     oculto2.classList.toggle('mostrar');
+    oculto.classList.remove('mostrar');
+    if (button2.classList == 'btn-active') {
+        button2.classList.remove('btn-active')
+    }else{
+         button2.classList.toggle('btn-active')
+         button.classList.remove('btn-active')
+    }
    });
 
   }

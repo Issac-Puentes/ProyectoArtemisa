@@ -24,10 +24,14 @@ routerM.route('/Comarostaphylis').get((req, res) => {
     });
 });
 
-
+routerM.route('/Arbustus/:value').get((req, res) => {
+    dbMadronos.searchArbustus(req.params.value).then(result => {
+        res.json(result[0]);
+    });
+});
 
 routerP.route('/:value').get((req, res) => {
-    dbMadronos.Preguntas().then(result => {
+    dbMadronos.Preguntas(req.params.value).then(result => {
         res.json(result[0]);
     });
 });

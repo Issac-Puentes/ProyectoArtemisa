@@ -1,5 +1,4 @@
 function showArbustus(){
-
   fetch('http://localhost:3000/Madrono/Arbustus')
   .then(Response => Response.json())
   .then(function content(info){
