@@ -21,6 +21,7 @@ btn1.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn1.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -34,6 +35,7 @@ btn2.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn2.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -47,6 +49,7 @@ btn3.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn3.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -60,6 +63,7 @@ btn4.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn4.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -73,6 +77,7 @@ btn5.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn5.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -86,6 +91,7 @@ btn6.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn6.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -99,6 +105,7 @@ btn7.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn7.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -112,6 +119,7 @@ btn8.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn8.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -125,6 +133,7 @@ btn9.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn9.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -138,6 +147,7 @@ btn10.addEventListener('click', () => {
     }else if(J==8){
         array.push(btn10.value);
         console.log(array);
+        send()
     }else{
 
     }
@@ -207,3 +217,6 @@ function selecc(){
 }
  
 
+function send(){
+    location.href='res.html?'+array;
+}

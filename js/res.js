@@ -1,45 +1,12 @@
-function showArbustus(){
-  fetch('http://localhost:3000/Madrono/Arbustus')
-  .then(Response => Response.json())
-  .then(function content(info){
-  for(var n=0;n<info.length;n++){
-  document.getElementById('ocultar').innerHTML +=
-  '<div class="card">'+
-  '<div class="card__image-holder">'+
-  '<img class="card__image" src="https://source.unsplash.com/300x225/?kite" alt="kite" />'+
-  '</div>'+
-  '<div class="card-title">'+
-  '<a href="#" class="toggle-info btn">'+
-    '<span class="left"></span>'+
-    '<span class="right"></span>'+
-  '</a>'+
-  '<h2>'+
-  info[n].especie +
-      '<small>'+ info[n].habito +'</small>'+
-  '</h2>'+
-  '</div>'+
-  '<div class="card-flap flap1">'+
-  '<div class="card-description asd">'+
-  '<h2><small>Estados:</small></h2>'+
-    info[n].estado.replace(/;/g,', ')+
-  '</div>'+
-'</div>'+
+  var query = window.location.search.substring(1);
+  
 
-  '</div>';
-  }
-  }).catch(function Error(){
-  alert('Fallo *Search()*');
-  })
-  } 
-
-  function showComarostaphylis(){
-
-    fetch('http://localhost:3000/Madrono/Comarostaphylis')
+  function showArbustus(){
+    fetch('http://localhost:3000/Madrono/Arbustus/'+query)
     .then(Response => Response.json())
     .then(function content(info){
-    console.log(info);
     for(var n=0;n<info.length;n++){
-    document.getElementById('ocultar').innerHTML +=
+    document.getElementById('ocultarr').innerHTML +=
     '<div class="card">'+
     '<div class="card__image-holder">'+
     '<img class="card__image" src="https://source.unsplash.com/300x225/?kite" alt="kite" />'+
@@ -63,10 +30,16 @@ function showArbustus(){
   
     '</div>';
     }
+    if (info.length == 0) {
+      document.getElementById('ocultar2r').classList.remove('ocultar');
+    }else{
+      pa();
+    }
     }).catch(function Error(){
     alert('Fallo *Search()*');
     })
-    } 
+  }
+
 
   function pa(){
     
@@ -114,5 +87,5 @@ function showArbustus(){
     });
   }
 
-  showArbustus();
-  showComarostaphylis();  
+
+  setTimeout(pa(),1000);
