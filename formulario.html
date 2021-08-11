@@ -15,23 +15,21 @@
   <link rel="stylesheet" href="css/galeria.css">
 
 </head>
-<body class="light-mode" id="cambio">
+<body class="light-mode" id="cambio" onload="selecc();">
 
 
     <div class="header-question">
-        <h3>Aqui va una pregunta</h3>
-        <p>Aqui va la descripcion: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quas, 
-        iste facere aspernatur voluptatem odio incidunt. Quod, ratione fuga ullam nesciunt, minima numquam 
-        id libero obcaecati, natus laudantium doloremque dolores.</p>
+        <div class="form">
+            <h3 id="pr"></h3>
+        <p id="desc"></p>
+        </div>
     </div>
-
-    <button style="margin-left: 20px;" class="boton boton--3" id="btnC">Cambio</button>
 
     <div class="formulario ocultar" id="ocultarF1">
         <div class="form">
             <form action="#" method="post">
-                <button type="button" class="btn btn-primary btn-lg dsn">Respuesta 1</button> 
-                <button type="button" class="btn btn-primary btn-lg dsn">Respuesta 2</button>
+                <button type="button" class="btn btn-primary btn-lg dsn" id="btn1" value="">info[0].value</button> 
+                <button type="button" class="btn btn-primary btn-lg dsn" id="btn2" value="">info[1].value</button>
             </form>
         </div>
     </div>
@@ -39,9 +37,9 @@
     <div class="formulario ocultar" id="ocultarF2">
         <div class="form">
             <form action="#" method="post">
-                <button type="button" class="btn btn-primary btn-lg dsn2">Respuesta 1</button> 
-                <button type="button" class="btn btn-primary btn-lg dsn2">Respuesta 2</button>
-                <button type="button" class="btn btn-primary btn-lg dsn2">Respuesta 3</button>
+                <button type="button" class="btn btn-primary btn-lg dsn2" id="btn3">Respuesta 1</button> 
+                <button type="button" class="btn btn-primary btn-lg dsn2" id="btn4">Respuesta 2</button>
+                <button type="button" class="btn btn-primary btn-lg dsn2" id="btn5">Respuesta 3</button>
             </form>
         </div>
     </div>
@@ -49,16 +47,10 @@
     <div class="formulario ocultar" id="ocultarF3">
         <div class="form">
             <form action="#" method="post">
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-primary btn-lg dsn3">Respuesta 1</button> 
-                        <button type="button" class="btn btn-primary btn-lg dsn3">Respuesta 2</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary btn-lg dsn3">Respuesta 3</button> 
-                        <button type="button" class="btn btn-primary btn-lg dsn3">Respuesta 4</button>
-                    </div>
-                </div> 
+                        <button type="button" class="btn btn-primary btn-lg dsn3" id="btn6">Respuesta 1</button> 
+                        <button type="button" class="btn btn-primary btn-lg dsn3" id="btn7">Respuesta 2</button>
+                        <button type="button" class="btn btn-primary btn-lg dsn3" id="btn8">Respuesta 3</button> 
+                        <button type="button" class="btn btn-primary btn-lg dsn3" id="btn9">Respuesta 4</button>
             </form>
         </div>
     </div>
@@ -67,12 +59,10 @@
         <div class="form">
             <form action="#" method="post">
             <label for="" class="label">Elige una opción: </label>
-            <select name="select" class="select-css">
-                <option value="value1">Value 1</option>
-                <option value="value2" selected>Value 2</option>
-                <option value="value3">Value 3</option>
+            <select name="select" class="select-css estado-pr" id="select">
+                <option value="#" selected>Elige una Respuesta</option>
             </select>
-            <button type="button" class="btn btn-primary btn-lg mt-4">Guardar</button>
+            <button type="button" class="btn btn-primary btn-lg mt-4" id="btn10">Guardar</button>
         </form>
         </div>
     </div>
@@ -80,7 +70,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-danger btn-lg btn-end mt-4">Cancelar</button>
+                <button type="button" class="btn btn-danger btn-lg btn-end mt-4" id="btnCancelar">Cancelar</button>
             </div>
         </div>
     </div>
@@ -92,7 +82,24 @@
         </div>
     
         <footer>
+            <div class="footer">
+            <!--<img src="img/1.png" class="cd" id="cesped" alt="">
+             <img src="img/1.png" class="cd" id="cesped2" alt="">
+            <img src="img/1.png" class="cd" id="cesped3" alt=""> -->
             
+            </div>
+            <div class="container-footer">
+                <div class="footer-2">
+                     <div class="copyright">
+                         © 2021 Todos los Derechos Reservados | <a href="">Artemisa</a>
+                     </div>
+ 
+                     <div class="information">
+                         <a href="">Informacion Compañia</a> | <a href="">Privacion y Politica</a> | <a href="">Terminos y Condiciones</a>
+                     </div>
+                 </div>
+ 
+             </div>
         </footer>
 
   <!-- partial -->

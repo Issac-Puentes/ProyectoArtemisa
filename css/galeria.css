@@ -64,9 +64,14 @@ body.dark-mode .glitch-window{
 }
 
 .header-question{
+  margin-top: 10%;
   width: 100%;
   height: auto;
-  background: #008a93;
+  /* background: #008a93; */
+}
+
+body.dark-mode .header-question {
+  color: #dce1df;
 }
 
 .header-question h3{
@@ -88,9 +93,7 @@ body.dark-mode .glitch-window{
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 0 1rem;
-  margin-top: 20px;
-  /* background: #ff6666; */
+   /* background: #ff6666;   */
   transition: all 0.5s ease;
 }
 
@@ -103,18 +106,25 @@ body.dark-mode .glitch-window{
   text-align: center;  
 }
 
+.container-center{
+  max-width: 970px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* text-align: center;  */
+}
+
 .dsn{
   margin: 50px 0 50px 0;
   margin-left: 20px;
 }
 .dsn2{
-  margin: 50px 0px 50px 0;
+  margin: 50px 30px 50px 0;
 }
 .dsn3{
-  flex-direction: column;
-  display:list-item;
-  margin: 30px 0 30px 0;
-  margin-left: 100px;
+  display: flexbox;
+  margin: 50px 0 50px 0;
+  margin-left: 20px;
 }
 
 .btn-end{
@@ -124,6 +134,10 @@ body.dark-mode .glitch-window{
 .form .label{
   font-family: 'Verdana', sans-serif;
   font-size: 25px;
+}
+
+body.dark-mode .form .label {
+  color: #dce1df;
 }
 
 .select-css {
@@ -212,7 +226,6 @@ body.dark-mode .container{
     margin: 60px auto;
     max-width: 970px;
     text-align: center;
-    
   }
   div.cards2 {
     position: relative ;
@@ -243,7 +256,6 @@ body.dark-mode .container{
   }
   
   footer {
-    background-color: black;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -326,6 +338,7 @@ body.dark-mode .container{
     background: #d9d9d9;
     position: absolute;
     width: 100%;
+    height: 100px;
     transform-origin: top;
     transform: rotateX(-90deg);
     -webkit-box-shadow: 13px 11px 10px 0px rgba(54, 54, 54, 1);
@@ -335,7 +348,7 @@ body.dark-mode .container{
 
   body.dark-mode div.card div.card-flap{
     background: #202c33;
-    color: #ffffff;
+    color: #fff;
   }
 
   div.card div.flap1 {

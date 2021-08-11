@@ -173,11 +173,56 @@ main .sobre-nosotros{
     text-align: justify;
 }
 
+.btn-color{
+   position: relative;
+   display: flexbox;
+   height: 45px;
+   /* margin-left: 12px; */
+   border-radius: 4px;
+   width: 200px;
+   color: #bcc0bec9;
+   background: transparent;
+   border:2px solid #bcc0bec9;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+body.dark-mode .btn-color{
+    border:2px solid #182a35;
+    color: #182a35;
+}
+
+body.dark-mode .btn-color:hover {
+    border: 2px solid #03bcf4;
+
+}
+
+.btn-color:hover {
+    border: 2px solid #014C69;
+} 
+
+.btn-active{
+     transition: all 500ms ease;
+    background: #014C69;
+    border: 2px solid #014C69;
+    color: #dce1df;
+    font-size: 18px;
+}
+
+body.dark-mode .btn-active {
+    background: #03bcf4;
+    border: 2px solid #03bcf4;
+    color: #dce1df;
+    font-size: 18px;
+}
+
+
 .boton {
     position: relative;
-    display: block;
+    display: flexbox;
     height: 35px;
     width: 100px;
+    margin-left: 12px;
     border-radius: 4px;
     text-transform: uppercase;
     background-color: transparent;
@@ -636,6 +681,13 @@ footer{
         width: 100%;
         background-size: contain;
         
+    }
+    .btn-color{
+        width: 150px;
+        text-align: center;
+    }
+    .container-center{
+        text-align: center;
     }
 }
 
